@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <title><?php echo $title; ?> - 用户系统管理后台</title>
+    <link rel="stylesheet" type="text/css" href="ucenter/view/bootstrap/css/bootstrap.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="ucenter/view/bootstrap/css/bootstrap-responsive.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="ucenter/view/bootstrap/css/bootswatch.css" media="screen" />
+
+	<?php foreach ($links as $link) { ?>
+	<link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
+	<?php } ?>
+	<?php foreach ($styles as $style) { ?>
+	<link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
+	<?php } ?>
+	
+	<!--[if lt IE 9]>
+    <script src="ucenter/view/js/html5.js"></script>
+    <![endif]-->
+	<script type="text/javascript" src="ucenter/view/jquery/jquery-1.9.0.min.js"></script>
+	<?php foreach ($scripts as $script) { ?>
+	<script type="text/javascript" src="<?php echo $script; ?>"></script>
+	<?php } ?>
+	
+</head>
+<body>
+

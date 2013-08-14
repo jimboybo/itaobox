@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <title><?php echo $title; ?> - 爱淘盒子</title>
+	<base href="<?php echo $base; ?>" />
+	<?php if ($description) { ?>
+	<meta name="description" content="<?php echo $description; ?>" />
+	<?php } ?>
+	<?php if ($keywords) { ?>
+	<meta name="keywords" content="<?php echo $keywords; ?>" />
+	<?php } ?>
+	<?php if ($icon) { ?>
+	<link href="<?php echo $icon; ?>" rel="icon" />
+	<?php } ?>
+	<link rel="stylesheet" type="text/css" href="crm/view/bootstrap/css/bootstrap.min.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="crm/view/bootstrap/css/theme.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="crm/view/bootstrap/css/animate.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="crm/view/css/common.css" media="screen" />
+	<?php foreach ($links as $link) { ?>
+	<link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
+	<?php } ?>
+	<?php foreach ($styles as $style) { ?>
+	<link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
+	<?php } ?>
+	
+	<!--[if lt IE 9]>
+    <script src="crm/view/js/html5.js"></script>
+    <![endif]-->
+	<script type="text/javascript" src="crm/view/jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="crm/view/js/core.js"></script>
+	
+</head>
+<body> 
+	<a id="back-to-top" class="scrolltop" href="#top" style="display: none;">
+		<i class="icon-chevron-up"></i>
+	</a>
+	
+	<?php echo $menus;?>
+

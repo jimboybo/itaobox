@@ -1,0 +1,20 @@
+<div class="pagination">
+    <ul>
+        <li>
+            <a href="<?php echo union_url(current_base_url(),$this->request->get,array('page'=>$prev_page));?>">上一页</a>
+        </li>
+        
+        <?php for($i=1;$i<=$total_page;$i++){
+            if($curr_page == $i){
+        ?>
+        <li class="active"><a href="<?php echo union_url(current_base_url(),$this->request->get,array('page'=>$i));?>"><?php echo $i;?></a></li>
+        <?php }else{?>
+        <li><a href="<?php echo union_url(current_base_url(),$this->request->get,array('page'=>$i));?>"><?php echo $i;?></a></li>
+        <?php }}?>
+        
+        <li>
+            <a href="<?php echo union_url(current_base_url(),$this->request->get,array('page'=>$next_page));?>">下一页</a>
+        </li>
+    </ul>
+    
+</div>

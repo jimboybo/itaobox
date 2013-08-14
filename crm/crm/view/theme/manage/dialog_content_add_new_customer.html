@@ -1,0 +1,123 @@
+<div id="aa">aaaa</div>
+<ul class="nav nav-tabs" ajax_url="<?php echo $ajax_url;?>">
+    <li class="active">
+        <a href="#person_customer" data-toggle="tab">
+            个人客户
+        </a>
+    </li>
+    <li class="">
+        <a href="#business_customer" data-toggle="tab">
+            企业客户
+        </a>
+    </li>
+	<li class="">
+        <a href="#taobao_customer" data-toggle="tab">
+            导入淘宝客户
+        </a>
+    </li>
+</ul>
+
+<div class="tabbable">
+    <div class="tab-content">
+        <form class="tab-pane active form-horizontal" id="person_customer"><!--个人客户-->
+            <div class="control-group">
+                <label class="control-label">客户名</label>
+                <div class="controls">
+                    <input type="text" name="customer_name" class="input-large" required/>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">电话</label>
+                <div class="controls">
+                    <input type="text" name="customer_mobile" class="input-large">
+                </div>
+            </div>
+			<?php echo $select_customer_grade;?>
+			<div class="control-group">
+				<label class="control-label">地址</label>
+				<div class="controls">
+					<select component="select" name="area_country_id" class="input-small">
+						<option value="1">中国</option>
+						<option value="2">美国</option>
+					</select>
+					<select component="select" name="area_state_id" class="input-small">
+						<option value="1">上海市</option>
+						<option value="2">浙江省</option>
+					</select>
+					<select component="select" name="area_city_id" class="input-small">
+						<option value="1">上海市</option>
+						<option value="2">宁波市</option>
+					</select>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn btn-primary" p="submit">提交</button>
+					<button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+				</div>
+			</div>
+			<input type="hidden" name="c_tag_id" value="1" />
+			<input type="hidden" name="customer_email" value="" />
+			<input type="hidden" name="customer_phone" value="" />
+			<input type="hidden" name="contact_name" value="" />
+			<input type="hidden" name="contact_phone" value="" />
+        </form>
+        <form class="tab-pane form-horizontal" id="business_customer"><!--企业客户-->
+			<div class="control-group">
+                <label class="control-label">企业名</label>
+                <div class="controls">
+                    <input name="customer_name" type="text" class="input-large" required>
+                </div>
+            </div>
+			<div class="control-group">
+                <label class="control-label">公司电话</label>
+                <div class="controls">
+                    <input type="text" class="input-large" name="customer_mobile">
+                </div>
+            </div>
+			<div class="control-group">
+                <label class="control-label">联系人姓名</label>
+                <div class="controls">
+                    <input type="text" class="input-large" name="contact_name" required>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">联系人电话</label>
+                <div class="controls">
+                    <input type="text" class="input-large" name="contact_phone">
+                </div>
+            </div>
+            <?php echo $select_customer_grade;?>
+			<div class="control-group">
+				<label class="control-label">地址</label>
+				<div class="controls">
+					<select component="select" name="area_country_id" class="input-small">
+						<option value="1">中国</option>
+						<option value="2">美国</option>
+					</select>
+					<select component="select" name="area_state_id" class="input-small">
+						<option value="1">上海市</option>
+						<option value="2">浙江省</option>
+					</select>
+					<select component="select" name="area_city_id" class="input-small">
+						<option value="1">上海市</option>
+						<option value="2">宁波市</option>
+					</select>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn btn-primary">提交</button>
+					<button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+				</div>
+			</div>
+			<input type="hidden" name="c_tag_id" value="2" />
+			<input type="hidden" name="customer_email" value="" />
+			<input type="hidden" name="customer_phone" value="" />
+        </form>
+		<form class="tab-pane form-horizontal" id="taobao_customer"><!--淘宝客户-->
+			绑定淘宝账号
+        </form>
+    </div>
+</div>
+

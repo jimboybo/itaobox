@@ -1,0 +1,23 @@
+<!-- dialog -->
+<!-- Start Modal -->
+<?php foreach ($js_files as $js) { ?>
+	<script type="text/javascript" src="<?php echo $js;?>"></script>
+<?php } ?>
+<?php foreach ($css_files as $css) { ?>
+	<link href="<?php echo $css; ?>" rel="stylesheet" type="text/css" />
+<?php } ?>
+<div id="<?php echo $id;?>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h4><?php echo $header;?></h4>
+	</div>
+	<div class="modal-body">
+		<?php echo $content;?>
+	</div>
+	<div class="modal-footer">
+		<a href="javascript:;" class="btn btn-primary" style="<?php echo $is_footer;?>"><?php echo $btn_ok;?></a>
+		<a href="javascript:;" class="btn" data-dismiss="modal" aria-hidden="true" style="<?php echo $is_footer;?>"><?php echo $btn_cancel;?></a>
+	</div>
+</div>
+<!-- End Modal -->
+

@@ -1,0 +1,73 @@
+		<form class="tab-pane active form-horizontal">
+            <div class="control-group">
+                <label class="control-label">收货人名称</label>
+                <div class="controls">
+                    <input type="text" name="customer_name" class="input-large" required/>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">电话</label>
+                <div class="controls">
+                    <input type="text" name="customer_mobile" class="input-large">
+                </div>
+            </div>
+			
+			<div class="control-group">
+				<label class="control-label">地址</label>
+				<div class="controls">
+					<select component="select" name="area_country_id" class="input-small">
+						<option value="1">中国</option>
+						<option value="2">美国</option>
+					</select>
+					<select component="select" name="area_state_id" class="input-small">
+						<option value="1">上海</option>
+						<option value="2">浙江省</option>
+					</select>
+					<select component="select" name="area_city_id" class="input-small">
+						<option value="1">上海市</option>
+						<option value="2">宁波市</option>
+					</select>
+				</div>
+			</div>
+			<div class="control-group">
+                <label class="control-label">街道地址</label>
+                <div class="controls">
+                    <input type="text" name="customer_mobile" class="input-large">
+                </div>
+            </div>
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn btn-primary" p="submit">保存</button>
+					<button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+				</div>
+			</div>
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th width=60>收货人</th>
+						<th>地址</th>
+						<th>电话</th>
+						<th width=70>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>刘飞羽</td>
+						<td>上海闵行区申北路168号47幢501室上海闵行区申北路168号47幢501室上海闵行区申北路168号47幢501室</td>
+						<td>18917678580</td>
+						<td><a href="javascript:;">修改</a>|<a href="javascript:;">删除</a></td>
+					</tr>
+					<tr>
+						<td>刘飞羽</td>
+						<td>上海闵行区申北路168号47幢501室</td>
+						<td>18917678580</td>
+						<td><a href="javascript:;">修改</a>|<a href="javascript:;">删除</a></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<input type="hidden" name="c_tag_id" value="8" />
+			<input type="hidden" name="customer_email" value="" />
+			<input type="hidden" name="customer_phone" value="" />
+			<input type="hidden" name="customer_contact_name" value="" />
+        </form>

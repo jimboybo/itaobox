@@ -1,0 +1,41 @@
+<?php foreach ($customers_list as $item) { ?>
+<tr>
+	<td><input type="checkbox"></td>
+	<td><?php echo $item['c_tag_name'];?></td>
+	<td>
+		<a href="#" data-toggle="popover" data-content="wwwww<a href=''>aaaaa</a>" title="" data-original-title="qqq"><?php echo $item['customer_name'];?></a>
+	</td>
+	<td><?php echo $item['customer_mobile'];?></td>
+	<td>
+		<?php echo $item['dropdown'];?>
+	</td>
+	<td>0.00</td>
+	<td>
+		<div>成功订单：0</div>
+		<hr style="margin:2px 0;" />
+		<div>失败订单：0</div>
+	</td>
+	<td>
+		<ul class="nav" style="margin-bottom: 0;">
+			<li><?php echo $item['state_zh_name'];?><?php echo $item['city_zh_name'];?></li>
+			<li>
+				<a href="javascript:;" p="dialog_manage_address" style="font-size: 9px;" data-toggle="modal">[收货地址]</a>
+			</li>
+		</ul>
+	</td>
+	<td>
+		<ul class="nav" style="margin-bottom: 0;">
+			<li>2013-03-24 20:30:40</li>
+			<li>
+				<a href="#dialog_show_history_deal_date" style="font-size: 9px;" data-toggle="modal">[历史]</a>
+			</li>
+		</ul>
+	<td>
+		<a href="javascript:;" p_action='edit'>编辑</a>|
+		<a href="javascript:;" p="dialog_do_memo" data-toggle="modal" p_action='memo'>备注</a>
+		<hr style="margin:2px 0;" />
+		<a href="javascript:;" p_action='view'>查看</a>|
+		<a href="javascript:;" p_id="<?php echo $item['customer_id'];?>" p_action='delete'>删除</a>
+	</td>
+</tr>
+<?php } ?>

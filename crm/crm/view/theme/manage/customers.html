@@ -1,0 +1,45 @@
+<?php echo $header; ?>
+<?php echo $subnav1; ?>
+<link rel="stylesheet" type="text/css" href="crm/view/bootstrap/css/base_admin.css" />
+
+<div class="widget" style="margin:50px 20px 0;">
+	
+	<div class="widget-header" style="padding:0px 10px;">
+		<i class="icon-user"></i>
+		<h3>所有客户</h3>
+		<!--div class="btn-group" style="margin-left:-100px;">
+            <a class="btn" href="#">所有企业客户</a>
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#" style="height: 20px;"><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+				<li><a href="#">所有企业客户</a></li>
+				<li><a href="#">成交企业客户</a></li>
+				<li><a href="#">潜在企业客户</a></li>
+            </ul>
+        </div-->
+		<a class="btn" href="#dialog_add_new_customer" data-toggle="modal"><i class="icon-plus-sign" ></i> 添加客户</a>
+		<a class="btn" href="#"><i class="icon-trash"></i> 删除</a>
+		<a class="btn" href="#"><i class="icon-refresh"></i> 同步淘宝客户</a>
+		
+		<form class="bs-docs-example form-search">
+            <div class="input-append" style="position: absolute;top:5px;right:0;width:260px;height:40px;">
+				<input type="text" class="span2 search-query">
+				<button type="submit" class="btn">搜索</button>
+            </div>
+        </form>
+	</div> <!-- /widget-header -->
+	<div class="widget-content">
+		<div>
+			<?php echo $table; ?>
+			<hr>
+			<?php echo $paging; ?>
+			<hr>
+		</div>
+	</div> <!-- /widget-content -->
+</div>
+
+<?php echo $dialog_addNewCustomer; ?>
+<?php echo $dialog_manage_address; ?>
+<?php echo $dialog_show_history_deal_date; ?>
+<?php echo $dialog_do_memo; ?>
+
+<?php echo $footer; ?>

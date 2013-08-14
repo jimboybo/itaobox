@@ -1,0 +1,11 @@
+<!--SELECT-->
+<div class="control-group" id="<?php echo $id;?>">
+    <label class="control-label"><?php echo $title;?></label>
+    <div class="controls">
+        <select component="select" name="<?php echo $name;?>">
+			<?php foreach ($list as $item) { ?>
+			<option value="<?php echo $item['value']; ?>"><?php echo $item['name']; ?></option>
+			<?php } ?>
+		</select>
+    </div>
+</div>

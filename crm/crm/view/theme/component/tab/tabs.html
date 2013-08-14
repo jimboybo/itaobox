@@ -1,0 +1,26 @@
+<ul class="nav nav-tabs">
+	<?php
+		for($i=0;$i<$len;$i++) {
+			if($i==0){
+				?><li class="active"><a href="#_<?php echo $i;?>" data-toggle="tab"><?php echo $titles[$i]?></a></li><?php 
+			}
+			else{
+				?><li class=""><a href="#_<?php echo $i;?>" data-toggle="tab"><?php echo $titles[$i]?></a></li><?php
+			}
+		}
+	?>
+</ul>
+<div class="tabbable">
+    <div class="tab-content">
+		<?php
+			for($i=0;$i<$len;$i++) {
+				if($i==0){
+					?><div class="tab-pane active" id="_<?php echo $i;?>"><?php echo $contents[$i]?></div><?php 
+				}
+				else{
+					?><div class="tab-pane" id="_<?php echo $i;?>"><?php echo $contents[$i]?></div><?php 
+				}
+			}
+		?>
+    </div>
+</div> <!-- /tabbable -->

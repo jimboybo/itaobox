@@ -1,0 +1,27 @@
+<!--dropdown-->
+<?php foreach ($js_files as $js) { ?>
+	<script type="text/javascript" src="<?php echo $js;?>"></script>
+<?php } ?>
+<?php foreach ($css_files as $css) { ?>
+	<link href="<?php echo $css; ?>" rel="stylesheet" type="text/css" />
+<?php } ?>
+<script type="text/javascript">
+    $(function(){
+        $('.dropdown[p_component="<?php echo $p_component;?>"] .dropdown-menu li a').off().on('click',function(event){
+            var self = $(this);
+            var parent = self.parent().parent().parent();
+            var v = self.attr('value');
+        });
+    });
+</script>
+<div class="dropdown" id="<?php echo $id;?>" p_component="<?php echo $p_component;?>" v="<?php echo $v;?>">
+    <span class="dropdown-toggle center" data-toggle="dropdown" style="cursor: pointer;">
+        <?php echo $title;?>
+        <b class="caret"></b>
+    </span>
+    <ul class="dropdown-menu">
+        <?php foreach ($list as $item) { ?>
+        <li><a href="<?php echo $item['url']; ?>" value="<?php echo $item['value'];?>"><?php echo $item['name']; ?></a></li>
+        <?php } ?>
+    </ul>
+</div>
