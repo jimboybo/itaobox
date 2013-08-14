@@ -1,0 +1,14 @@
+<ul class="breadcrumb">
+	<?php
+		for($i=0;$i<$len;$i++) {
+			if($i==($len-1)){
+				echo '<li class="active">'.$breadcrumbs[$i].'</li>';
+			}
+			else{
+				echo '<li><a href="#">'.$breadcrumbs[$i].'</a> <span class="divider">/</span></li>';
+			}
+		}
+	?>
+</ul>
+
+

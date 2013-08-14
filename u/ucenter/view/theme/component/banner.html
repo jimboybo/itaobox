@@ -1,0 +1,35 @@
+<!-- Navbar ================================================== -->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				 <span class="icon-bar"></span>
+				 <span class="icon-bar"></span>
+				 <span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="/">用户系统</a>
+			<div class="nav-collapse" id="main-menu">
+				<ul class="nav" id="main-menu-left">
+					<li class="active"><a onclick="pageTracker._link(this.href); return false;" href="/">首页</a></li> 
+					<li class="dropdown" id="preview-menu">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">管理 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/">修改创始人密码</a></li>
+							<li class="divider"></li>
+							<li><a href="/?route=admin/member">用户管理</a></li>
+							<li><a href="/?route=admin/member">应用管理</a></li>
+							<li><a href="/">管理员管理</a></li>
+							<li class="divider"></li>
+							<li><a href="/">其他</a></li>
+							<li><a href="/?route=auth/login">登录授权测试</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav pull-right" id="main-menu-right">
+					<li><a rel="tooltip" target="_blank" href="/" title="用户提醒" onclick="_gaq.push(['_trackEvent', 'click', 'outbound', 'builtwithbootstrap']);">您好，创始人 <i class="icon-share-alt"></i></a></li>
+					<li><a rel="tooltip" target="_blank" href="/" title="Marketplace for premium Bootstrap templates" onclick="_gaq.push(['_trackEvent', 'click', 'outbound', 'wrapbootstrap']);">WrapBootstrap <i class="icon-share-alt"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

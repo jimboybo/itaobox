@@ -1,0 +1,21 @@
+<form class="well form-search" action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+    <div class="control-group">
+        <div class="controls">
+            <input name="username" type="text" class="input-medium" placeholder="用户名" />
+            <input name="password" type="password" class="input-medium" placeholder="密码" />
+            <input name="email" type="text" class="input-medium" placeholder="电子邮箱" />
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <input name="firstname" type="text" class="input-medium" placeholder="First Name" />
+            <input name="lastname" type="text" class="input-medium" placeholder="Last Name" />
+        </div>
+    </div>
+    <div class="form-actions">
+        <input name="from_id" type="hidden" value="1"/>
+        <input name="status" type="hidden" value="1"/>
+        <input name="ip" type="hidden" value="<?php echo $_SERVER["REMOTE_ADDR"];?>"/>
+        <button type="submit" class="btn btn-primary">确认添加</button>
+    </div>
+</form>

@@ -1,0 +1,54 @@
+<div class="page-header">
+    <h4>用户列表</h4>
+</div>
+<?php echo $pager;?>
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>用户ID</th>
+            <th>用户名</th>
+            <th>电子邮件</th>
+            <th>注册来源</th>
+			<th>应用来源</th>
+            <th>IP</th>
+            <th>注册时间</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($members_list as $member) { ?>
+            <tr>
+                <td><?php echo $member['member_id'];?></td>
+                <td><?php echo $member['username'];?></td>
+                <td><?php echo $member['email'];?></td>
+				<td><?php echo $member['reg_from_id'];?>:<?php echo $member['from_name'];?></td>
+                <td><?php echo $member['reg_from_app_id'];?>:<?php echo $member['app_name'];?></td>
+                <td><?php echo $member['reg_ip'];?></td>
+                <td><?php echo date("Y-m-d H:i",$member['date_added']);?></td>
+                <td><a href="javascript:;">删除</a> | <a class="hhh" href="javascript:;">编辑</a></td>
+            </tr>
+        <?php } ?>
+    </tbody>
+</table>
+
+<script>
+    $(function(){
+        $('.hhh').click(function(){
+            $("#dialog-form").dialog();
+        });
+        
+    });
+</script>
+<div id="dialog-form" title="编辑用户：">
+	<p class="validateTips">All form fields are required.</p>
+	<form>
+	<fieldset>
+		<label for="name">Name</label>
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+		<label for="email">Email</label>
+		<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all" />
+	</fieldset>
+	</form>
+</div>
