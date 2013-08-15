@@ -8,7 +8,7 @@ $_['get_token_url'] 						= 'https://oauth.taobao.com/token';//获取访问令�
 
 //用户中心基础链接
 //$_['ucenter_base_url'] 						= 'http://u.itaobox.com/';
-$_['ucenter_base_url'] 						= 'http://u.itaobox.com/';
+$_['ucenter_base_url'] 						= 'http://u.dev.itaobox.com/';
 
 //crmapi的基础链接
 //$_['crm_api_base_url'] 						= 'http://crm.itaobox.com/index.php?route=api/';

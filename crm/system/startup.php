@@ -69,6 +69,10 @@ if (!isset($_SERVER['REQUEST_URI'])) {
 	} 
 }
 
+if (!isset($_SERVER['HTTP_HOST'])) {
+	$_SERVER['HTTP_HOST'] = getenv('HTTP_HOST');
+}
+
 // Helper
 require_once(DIR_SYSTEM . 'helper/json.php'); 
 require_once(DIR_SYSTEM . 'helper/utf8.php'); 
@@ -97,18 +101,9 @@ require_once(DIR_SYSTEM . 'library/request.php');
 require_once(DIR_SYSTEM . 'library/response.php');
 require_once(DIR_SYSTEM . 'library/session.php');
 require_once(DIR_SYSTEM . 'library/template.php');
-
-// Core_tools
-require_once(DIR_SYSTEM . 'core_tools/ilogs.php');
-require_once(DIR_SYSTEM . 'core_tools/api.php');
-require_once(DIR_SYSTEM . 'core_tools/utils.php');
-require_once(DIR_SYSTEM . 'core_tools/url_helper.php');
-require_once(DIR_SYSTEM . 'core_tools/tokentool.php');
-
-// Core_libs
-require_once(DIR_SYSTEM . 'core_libs/member.php');
-
-// Core_3rd_libs
-require_once(DIR_SYSTEM . 'core_3rd_libs/taobao-sdk-php-online_standard-20130219/TopSdk.php');
-
+require_once(DIR_SYSTEM . 'library/openbay.php');
+require_once(DIR_SYSTEM . 'library/play.php');
+require_once(DIR_SYSTEM . 'library/ebay.php');
+require_once(DIR_SYSTEM . 'library/amazon.php');
+require_once(DIR_SYSTEM . 'library/amazonus.php');
 ?>

@@ -5,7 +5,7 @@ class ControllerApiCustomer extends Controller {
 	}
 	
 	public function get(){
-		$this->cache->set('api_customer_get','sssssss');
+		
 	}
 	//添加客户
 	public function add(){

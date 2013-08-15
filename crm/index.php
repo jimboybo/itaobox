@@ -1,9 +1,13 @@
 <?php
 // Version
-define('VERSION', '1.5.4');
+define('VERSION', '1.5.6');
+
+/* Testing non-beta */
 
 // Configuration
-require_once('config.php');
+if (file_exists('config.php')) {
+	require_once('config.php');
+}  
    
 // Install 
 if (!defined('DIR_APPLICATION')) {
@@ -13,6 +17,9 @@ if (!defined('DIR_APPLICATION')) {
 
 // Startup
 require_once(DIR_SYSTEM . 'startup.php');
+require_once(DIR_SYSTEM . 'startup_more.php');
+
+// Application Classes
 
 // Registry
 $registry = new Registry();
@@ -32,7 +39,7 @@ $db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 $registry->set('db', $db);
 
 // Url
-$url = new Url($config->get('config_url'), $config->get('config_use_ssl') ? $config->get('config_ssl') : $config->get('config_url'));	
+$url = new Url($config->get('config_url'), $config->get('config_secure') ? $config->get('config_ssl') : $config->get('config_url'));	
 $registry->set('url', $url);
 
 

@@ -51,22 +51,42 @@ class Image {
 			   
 			imagedestroy($this->image);
 		}
-    }	    
-	
-    public function resize($width = 0, $height = 0) {
+    }
+
+	/**
+	*	
+	*	@param width 
+	*	@param height
+	*	@param default char [default, w, h]
+	*				   default = scale with white space, 
+	*				   w = fill according to width, 
+	*				   h = fill according to height
+	*	
+	*/
+    public function resize($width = 0, $height = 0, $default = '') {
     	if (!$this->info['width'] || !$this->info['height']) {
 			return;
 		}
 
 		$xpos = 0;
 		$ypos = 0;
+		$scale = 1;
 
-		$scale = min($width / $this->info['width'], $height / $this->info['height']);
-		
-		if ($scale == 1 && $this->info['mime'] != 'image/png') {
+		$scale_w = $width / $this->info['width'];
+		$scale_h = $height / $this->info['height'];
+
+		if ($default == 'w') {
+			$scale = $scale_w;
+		} elseif ($default == 'h'){
+			$scale = $scale_h;
+		} else {
+			$scale = min($scale_w, $scale_h);
+		}
+
+		if ($scale == 1 && $scale_h == $scale_w && $this->info['mime'] != 'image/png') {
 			return;
 		}
-		
+
 		$new_width = (int)($this->info['width'] * $scale);
 		$new_height = (int)($this->info['height'] * $scale);			
     	$xpos = (int)(($width - $new_width) / 2);
