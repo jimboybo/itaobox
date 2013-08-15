@@ -1,0 +1,1 @@
+var base_url = 'http://crm.dev.itaobox.com/';

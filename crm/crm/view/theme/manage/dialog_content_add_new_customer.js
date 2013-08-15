@@ -10,7 +10,7 @@ $(function(){
 			alert('添加成功！');
 			$('.modal').modal('hide');
 		},
-		url:'http://crm.itaobox.com/index.php?route=api/customer/add',
+		url:base_url+'?route=api/customer/add',
 		type:'get',
 		resetForm:true
     };
@@ -25,7 +25,7 @@ $(function(){
 			alert('添加成功！');
 			$('.modal').modal('hide');
 		},
-		url:'http://crm.itaobox.com/index.php?route=api/customer/add',
+		url:base_url+'?route=api/customer/add',
 		type:'get',
 		resetForm:true
     };

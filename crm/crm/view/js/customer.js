@@ -13,7 +13,7 @@ $(function () {
 	$('table#table_customer_list tbody tr a[p_action="delete"]').on('click',function(event){
 		var id=$(this).attr('p_id');
 		var self = $(this);
-		$.get('http://crm.itaobox.com/index.php?route=api/customer/del',{data:id},function(data){
+		$.get(base_url+'?route=api/customer/del',{data:id},function(data){
 			if (data.hasOwnProperty('error_response')) {
 				log('[页面：manage/customers - 接口：api/customer/del - 参数：id:'+id+'] [错误：'+data.error_response.code+' - '+data.error_response.msg+']');
 			}

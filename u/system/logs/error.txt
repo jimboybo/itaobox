@@ -2310,3 +2310,13 @@
 2013-08-15 2:19:51 - PHP Notice:  Undefined index:  contents in /home/wwwroot/u.itaobox.com/ucenter/controller/component/tabs.php on line 7
 2013-08-15 2:19:51 - PHP Notice:  Undefined index:  data in /home/wwwroot/u.itaobox.com/ucenter/controller/component/breadcrumbs.php on line 5
 2013-08-15 2:19:51 - PHP Notice:  Undefined index:  data in /home/wwwroot/u.itaobox.com/ucenter/controller/component/breadcrumbs.php on line 6
+2013-08-15 6:44:28 - PHP Notice:  Undefined index: len in /Users/jimboybo/Desktop/Project/PHP/itaobox/u/ucenter/controller/component/tabs.php on line 5
+2013-08-15 6:44:28 - PHP Notice:  Undefined index: titles in /Users/jimboybo/Desktop/Project/PHP/itaobox/u/ucenter/controller/component/tabs.php on line 6
+2013-08-15 6:44:28 - PHP Notice:  Undefined index: contents in /Users/jimboybo/Desktop/Project/PHP/itaobox/u/ucenter/controller/component/tabs.php on line 7
+2013-08-15 6:44:28 - PHP Notice:  Undefined index: data in /Users/jimboybo/Desktop/Project/PHP/itaobox/u/ucenter/controller/component/breadcrumbs.php on line 5
+2013-08-15 6:44:28 - PHP Notice:  Undefined index: data in /Users/jimboybo/Desktop/Project/PHP/itaobox/u/ucenter/controller/component/breadcrumbs.php on line 6
+2013-08-15 6:44:51 - PHP Notice:  Undefined index: len in /Users/jimboybo/Desktop/Project/PHP/itaobox/u/ucenter/controller/component/tabs.php on line 5
+2013-08-15 6:44:51 - PHP Notice:  Undefined index: titles in /Users/jimboybo/Desktop/Project/PHP/itaobox/u/ucenter/controller/component/tabs.php on line 6
+2013-08-15 6:44:51 - PHP Notice:  Undefined index: contents in /Users/jimboybo/Desktop/Project/PHP/itaobox/u/ucenter/controller/component/tabs.php on line 7
+2013-08-15 6:44:51 - PHP Notice:  Undefined index: data in /Users/jimboybo/Desktop/Project/PHP/itaobox/u/ucenter/controller/component/breadcrumbs.php on line 5
+2013-08-15 6:44:51 - PHP Notice:  Undefined index: data in /Users/jimboybo/Desktop/Project/PHP/itaobox/u/ucenter/controller/component/breadcrumbs.php on line 6

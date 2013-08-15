@@ -127,7 +127,8 @@ $registry->set('encryption', new Encryption($config->get('config_encryption')));
 		
 // Front Controller 
 $controller = new Front($registry);	
-	
+
+//print_r($request);
 // Router
 if (isset($request->get['route'])) {
 	$action = new Action($request->get['route']);
