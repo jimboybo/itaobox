@@ -1,16 +1,23 @@
 <?php
 
-// Core_tools
-require_once(DIR_SYSTEM . 'core_tools/ilogs.php');
-require_once(DIR_SYSTEM . 'core_tools/api.php');
-require_once(DIR_SYSTEM . 'core_tools/utils.php');
-require_once(DIR_SYSTEM . 'core_tools/url_helper.php');
-require_once(DIR_SYSTEM . 'core_tools/tokentool.php');
+/***
+ * core for digcrazy
+ * 
+ */
+
+// tools
+require_once(DIR_SYSTEM . 'core/tools/ilogs.php');
+require_once(DIR_SYSTEM . 'core/tools/utils.php');
+require_once(DIR_SYSTEM . 'core/tools/url_helper.php');
+require_once(DIR_SYSTEM . 'core/tools/tokentool.php');
+
+// api tools
+require_once(DIR_SYSTEM . 'core/apitools/api.php');
 
 // Core_libs
-require_once(DIR_SYSTEM . 'core_libs/member.php');
+require_once(DIR_SYSTEM . 'core/libs/member.php');
 
 // Core_3rd_libs
-require_once(DIR_SYSTEM . 'core_3rd_libs/taobao-sdk-php-online_standard-20130219/TopSdk.php');
+require_once(DIR_SYSTEM . 'core/plugs/taobao/TopSdk.php');
 
 ?>
